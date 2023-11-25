@@ -26,7 +26,8 @@ body{
 .logo h1 {
     float: left; 
     color: #fff;
-} 
+}  
+
 
 .nav-items {
     float: right;
@@ -35,6 +36,7 @@ body{
 .svg-inline--fa {
     margin-top: 0.55rem;
     height: 2em; 
+    
 }
 
 nav {
@@ -48,16 +50,16 @@ nav {
 }
 
 /* Styling for the hover animation */
-.logo:hover h2 {
-    animation: increaseDecrease 1s alternate infinite;
+.logo:hover h1 {
+    animation: decreaseSize 1s alternate infinite;
 }
 
-@keyframes increaseDecrease {
+@keyframes decreaseSize {
     from {
         transform: scale(1);
     }
     to {
-        transform: scale(1.1);
+        transform: scale(0.8); /* Decrease the size */
     }
 }
 
@@ -65,23 +67,25 @@ nav {
 .nav-items ul {
     display: none;
     position: absolute;
-    background-color: #fff;
-    list-style: none;
+    background-color: rgba(156, 151, 151, 0.1);
+    /* list-style: none; */
     padding: 0;
     margin: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Styling for the <i> tag */
-.nav-toggle i {
+.nav-toggle  {
     cursor: pointer;
 }
 
 /* Styling for the <li> elements */
 .nav-items ul li {
     padding: 10px; 
-    color: black;
-}
+    color: white !important;
+} 
+
+
 
 /* Styling for the overlay */
 .overlay {
@@ -107,10 +111,17 @@ nav {
     left: 50%;
     transform: translate(-50%, -55%);
     list-style: none;
+    text-decoration: none;
     padding: 0;
     margin: 0; 
     width: 100%; 
-    height: 70%;
+    height: 70%; 
+    text-align: center;
+} 
+
+.list-overlay li a{
+    color: #fff; 
+    text-decoration: none;
 }
 
 /* Media query for smaller screens */
@@ -151,7 +162,7 @@ nav {
         cursor: pointer;
         position: fixed;
         top: 10px; 
-        right: 10px; 
+        right: 15px; 
         z-index: 1000; 
     } 
 
@@ -176,7 +187,7 @@ nav {
         position: fixed;
         top: 10%;
         left: 10%;
-        transform: translate(-1%, 50%); 
+        transform: translate(25%, 50%); 
         width: 100%;
         list-style: none;
         padding: 0;
@@ -185,10 +196,8 @@ nav {
 } 
 
 .svg-inline--fa {
-    margin-top: 1.6rem;
+    margin-top: 1.7rem;
     height: 2em; 
 }
-
-
 
 /* -------------------------------------------------------------------------- */
