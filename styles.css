@@ -1,0 +1,194 @@
+/* 
+    Cosmic GreenHaus (Pty)Ltd (CGH)
+    CGH is a start up providing energy solutions, mainly solar solutions, but not limited to that only. This site also serves as the Portfolio project for Khanya.
+    This StyleSheet is modeled after the company colours and logo, being: 
+    List Colours: 
+
+    Author: Khanya Gqirana, who is also a director. 
+    Date: 11/09/2023 (Due Date - 30/11/2023 Portfolio: 8 page Website)
+
+    Filename: styles.css
+
+*/ 
+
+/* --------------------------- General Styles --------------------------- */
+body{
+    font-family: Arial, sans-serif; 
+    margin: 5px;
+    padding: 0;
+     background-color: black; /* Set the background color to black */
+} 
+
+/* ---------------------------------------------------------------------- */ 
+
+/* --------------------------- Navigation Section --------------------------- */
+
+.logo h1 {
+    float: left; 
+    color: #fff;
+} 
+
+.nav-items {
+    float: right;
+} 
+
+.svg-inline--fa {
+    margin-top: 0.55rem;
+    height: 2em; 
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    padding-right: 20px;
+    background-color: black; 
+    color: white; 
+}
+
+/* Styling for the hover animation */
+.logo:hover h2 {
+    animation: increaseDecrease 1s alternate infinite;
+}
+
+@keyframes increaseDecrease {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+/* Styling to hide the <ul> initially */
+.nav-items ul {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the <i> tag */
+.nav-toggle i {
+    cursor: pointer;
+}
+
+/* Styling for the <li> elements */
+.nav-items ul li {
+    padding: 10px; 
+    color: black;
+}
+
+/* Styling for the overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+/* Animation for showing the overlay */
+.show-overlay {
+    display: block;
+}  
+
+.list-overlay {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    list-style: none;
+    padding: 0;
+    margin: 0; 
+    width: 100%; 
+    height: 70%;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .logo {
+        float: none;
+        text-align: center;
+        margin-bottom: 20px; /* Adjust spacing */
+    } 
+
+    .logo h2 {
+        position: fixed;
+        top: 10px; 
+        left: 10px; 
+        z-index: 1000; 
+        visibility: hidden; 
+    }
+
+    .nav-items {
+        float: none;
+        text-align: center;
+    }
+
+    .nav-items ul {
+        position: static;
+        display: none; 
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-toggle {
+        display: block;
+        text-align: right;
+        margin-bottom: 20px; 
+    }
+
+    .nav-toggle { 
+        cursor: pointer;
+        position: fixed;
+        top: 10px; 
+        right: 10px; 
+        z-index: 1000; 
+    } 
+
+    .overlay {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .show-overlay .overlay {
+        display: block; 
+        ;
+    }  
+
+    .show-overlay .logo h2 {
+        visibility: visible;
+    }
+
+    .list-overlay {
+        display: block;
+        position: fixed;
+        top: 10%;
+        left: 10%;
+        transform: translate(-1%, 50%); 
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+} 
+
+.svg-inline--fa {
+    margin-top: 1.6rem;
+    height: 2em; 
+}
+
+
+
+/* -------------------------------------------------------------------------- */
