@@ -35,8 +35,7 @@ body{
 
 .svg-inline--fa {
     margin-top: 0.55rem;
-    height: 2em; 
-    
+    height: 2em;
 }
 
 nav {
@@ -80,10 +79,10 @@ nav {
 }
 
 /* Styling for the <li> elements */
-.nav-items ul li {
+/* .nav-items ul li {
     padding: 10px; 
     color: white !important;
-} 
+}  */
 
 
 
@@ -122,6 +121,12 @@ nav {
 .list-overlay li a{
     color: #fff; 
     text-decoration: none;
+    font-size: 44px; 
+} 
+
+.list-overlay li{
+    margin-top: 0.5rem; 
+    margin-bottom: 3rem;
 }
 
 /* Media query for smaller screens */
@@ -132,7 +137,7 @@ nav {
         margin-bottom: 20px; /* Adjust spacing */
     } 
 
-    .logo h2 {
+    .logo h2s {
         position: fixed;
         top: 10px; 
         left: 10px; 
@@ -156,6 +161,7 @@ nav {
         display: block;
         text-align: right;
         margin-bottom: 20px; 
+        font-size: 1.4rem;
     }
 
     .nav-toggle { 
@@ -175,7 +181,6 @@ nav {
 
     .show-overlay .overlay {
         display: block; 
-        ;
     }  
 
     .show-overlay .logo h2 {
@@ -185,19 +190,103 @@ nav {
     .list-overlay {
         display: block;
         position: fixed;
-        top: 10%;
-        left: 10%;
-        transform: translate(25%, 50%); 
-        width: 100%;
+        top: 20%;
+        left: 20%;
+        transform: translate(10%, 33%); 
+        width: 100px;
         list-style: none;
-        padding: 0;
-        margin: 0;
+        padding: 0.1rem;
+        margin: 0.1rem;
+    }
+
+    .svg-inline--fa {
+        margin-top: 1.7rem;
+        height: 1.5em; 
+    }  
+    
+    .list-overlay li a{
+        font-size: 1.2rem; 
+    } 
+    
+    .list-overlay li{
+        margin-top: 0.3rem; 
+        margin-bottom: 0.3rem;
+        padding: 0.6rem;
     }
 } 
 
-.svg-inline--fa {
-    margin-top: 1.7rem;
-    height: 2em; 
+/* -------------------------------------------------------------------------- */ 
+
+/* ---------------------------- Carousel Section ----------------------------- */ 
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 80%;
+    margin: 4px;
+    max-height: 200px;  
+    z-index: 1;
+    /* Responsive adjustments */
+    /* Landscape tablets and medium desktops */
+    @media (min-width: 768px) {
+        max-height: 400px; /* Adjust the height for tablets */
+    }
+
+    /* Larger desktops and laptops */
+    @media (min-width: 992px) {
+        max-height: 500px; /* Adjust the height for larger screens */
+    }
+
+    /* Extra large screens and TVs */
+    @media (min-width: 1200px) {
+        max-height: 600px; /* Adjust the height for extra-large screens */
+    }
 }
 
-/* -------------------------------------------------------------------------- */
+/* Styling for the carousel slides (images) */
+.carousel-slide {
+    display: none; 
+    width: 100%;
+    height: 50%; 
+}
+
+/* Styleing for the carousel controls */
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; 
+}
+
+/* Styling for the previous and next buttons */
+.fa-chevron-left,
+.fa-chevron-right {
+    font-size: 18px;
+    cursor: pointer;
+    background-color: black;
+    padding: 14px;
+    border-radius: 100%;
+    color: white; /* Changing the color of the buttons to white */
+} 
+
+/* Make the images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Define keyframes for auto-scrolling */
+@keyframes carousel {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* ---------------------------------------------------------------------------- */
